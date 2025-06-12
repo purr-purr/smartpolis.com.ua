@@ -1,0 +1,50 @@
+.container {
+	width: 100%;
+	position: relative;
+
+	&[open] .heading:before {
+		transform: rotate(220deg);
+	}
+
+	&[open] .heading:after {
+		transform: rotate(45deg);
+	}
+}
+
+.heading {
+	cursor: pointer;
+	color: var(--bold-text);
+	font-size: 20px;
+	font-weight: 600;
+	padding: 16px 20px;
+
+	@include media($mobile-bp) {
+		font-size: 18px;
+	}
+
+	&:after, &:before {
+		content: ' ';
+		position: absolute;
+		transform: rotate(136deg);
+		background-color: var(--bold-text);
+		border-radius: 10px;
+	}
+
+	&:after {
+		right: -3px;
+		top: 22px;
+		width: 10px;
+		height: 3px;
+	}
+
+	&:before {
+		right: 6px;
+		top: 19px;
+		width: 3px;
+		height: 10px;
+	}
+}
+
+.content {
+	padding-bottom: 16px;
+}

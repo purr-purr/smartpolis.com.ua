@@ -1,0 +1,11 @@
+.container {
+	width: fit-content;
+	font-size: 40px;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: var(--bold-text);
+
+	@include media($mobile-bp) {
+		font-size: 26px;
+	}
+}
